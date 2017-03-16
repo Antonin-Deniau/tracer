@@ -1,0 +1,3 @@
+#!/usr/bin/env rarun2
+program=./ch18.bin
+stdin=input.txt
