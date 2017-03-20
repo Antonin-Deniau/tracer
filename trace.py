@@ -1,8 +1,5 @@
 #!/usr/bin/env python
 import r2pipe
-from tinydb import TinyDB, where
-db = TinyDB('./trace.json')
-regs_db = db.table('regs')
 
 r2 = r2pipe.open("./ch18.bin")
 
@@ -19,21 +16,57 @@ opcodes = [
   0x804846c,
 ]
 
+match = {
+  'op1': 0x80488e4,
+  'op2': 0x80488c0,
+  'op3': 0x804888e,
+  'op4': 0x8048862,
+  'op5': 0x8048854,
+  'op6': 0x804880a,
+  'op7': 0x80487be,
+  'op8': 0x804878d,
+  'op9': 0x804875c,
+  'op10': 0x804871e,
+  'op11': 0x8048697,
+  'op12': 0x8048672,
+  'op13': 0x8048647,
+  'op14': 0x804861c,
+  'op15': 0x80485f0,
+  'op16': 0x80485bb,
+  'op17': 0x8048591,
+  'op18': 0x804855b,
+  'op19': 0x8048518,
+  'op20': 0x80484d5,
+  'op21': 0x804849c,
+  'op22': 0x804846c,
+}
+
 r2.cmd("ood")
 
 for opcode in opcodes:
   print("break at {}".format(hex(opcode)))
   r2.cmd("db {}".format(opcode))
 
+res = ""
+
 r2.cmd("dc")
-# for _ in xrange(520):
-for _ in xrange(50):
-  regs = r2.cmdj("arj")
+for _ in xrange(520):
+  name = "unk"
+  addr = r2.cmdj("arj")["eip"]
 
-  eax = regs["eax"]
-  edx = regs["edx"]
-  ecx = regs["edx"]
+  _90 = r2.cmdj("p8j 1 @ 0x8049a90")[0]
+  _91 = r2.cmdj("p8j 1 @ 0x8049a91")[0]
+  _92 = r2.cmdj("p8j 1 @ 0x8049a92")[0]
+  _93 = r2.cmdj("p8j 1 @ 0x8049a93")[0]
+  _94 = r2.cmdj("p8j 1 @ 0x8049a94")[0]
 
-  regs_db.insert({ 'eax': eax, 'edx': edx, 'ecx': ecx })
+  for key in match:
+    if match[key] == addr:
+      name = key
+      break
+
+  res += "{:02x} {:02x} {:02x} {:02x} {:02x} {}\n".format(_90, _91, _92, _93, _94, name)
 
   r2.cmd("dc")
+
+print(res)
