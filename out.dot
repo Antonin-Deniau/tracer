@@ -1,0 +1,197 @@
+digraph code {
+	graph [bgcolor=white fontsize=8 fontname="Courier"];
+	node [fillcolor=gray style=filled shape=box];
+	edge [arrowhead="vee"];
+	"0x080483e0" -> "0x08048416" [color="green"];
+	"0x080483e0" -> "0x08048411" [color="red"];
+	"0x080483e0" [URL="main/0x080483e0", fillcolor="yellow", color="black", label="/ (fcn) main 1296\l|   main ();\l| 0x080483e0      push 0x8049d1f\l| 0x080483e5      call sym.imp.printf\l| 0x080483ea      add esp, 4\l| 0x080483ed      push 0x8049a98\l| 0x080483f2      push 0x8049da0\l| 0x080483f7      call sym.imp.scanf\l| 0x080483fc      add esp, 8\l| 0x080483ff      call 0x8048436\l| 0x08048404      xor eax, eax\l| 0x08048406      add al, byte [0x8049a84]\l| 0x0804840c      cmp eax, 0\l| 0x0804840f      je 0x8048416\l"]
+	"0x08048411" -> "0x08048416" [color="blue"];
+	"0x08048411" [URL="main/0x08048411", fillcolor="lightgray", color="black", label="| 0x08048411      mov eax, 1\l"]
+	"0x08048416" -> "0x0804843b" [color="blue"];
+	"0x08048416" [URL="main/0x08048416", fillcolor="lightgray", color="black", label="| 0x08048416      shl eax, 2\l| 0x08048419      mov eax, dword str.__iii_____THAAAADAAaaaa::.._r_nGreat_you_Got_it____\l| 0x0804841f      push eax\l| 0x08048420      push str._r_n_s_r_n_s ; str._r_n_s_r_n_s\l| 0x08048425      call sym.imp.printf\l| 0x0804842a      mov eax, 1\l| 0x0804842f      mov ebx, 0\l| 0x08048434      int 0x80\l| 0x08048436      mov esi, 0x8049a95\l"]
+	"0x0804843b" -> "0x0804869c" [color="green"];
+	"0x0804843b" -> "0x08048450" [color="red"];
+	"0x0804843b" [URL="main/0x0804843b", fillcolor="lightgray", color="black", label="| 0x0804843b      lodsd eax, dword [esi]\l| 0x0804843c      call fcn.080488f0\l| 0x08048441      xor ebx, ebx\l| 0x08048443      cmp byte [0x8049a90], 0\l| 0x0804844a      jne 0x804869c\l"]
+	"0x08048450" -> "0x080484a1" [color="green"];
+	"0x08048450" -> "0x08048459" [color="red"];
+	"0x08048450" [URL="main/0x08048450", fillcolor="lightgray", color="black", label="| 0x08048450      cmp byte [0x8049a92], 0\l| 0x08048457      jne 0x80484a1\l"]
+	"0x08048459" -> "0x08048471" [color="green"];
+	"0x08048459" -> "0x08048462" [color="red"];
+	"0x08048459" [URL="main/0x08048459", fillcolor="lightgray", color="black", label="| 0x08048459      cmp byte [0x8049a91], 0\l| 0x08048460      jne 0x8048471\l"]
+	"0x08048462" -> "0x080488eb" [color="blue"];
+	"0x08048462" [URL="main/0x08048462", fillcolor="lightgray", color="black", label="| 0x08048462      inc word [0x8049a8e]\l| 0x08048469      sub esi, 3\l| 0x0804846c      jmp 0x80488eb\l"]
+	"0x08048471" -> "0x080484a1" [color="green"];
+	"0x08048471" -> "0x0804847a" [color="red"];
+	"0x08048471" [URL="main/0x08048471", fillcolor="lightgray", color="black", label="| 0x08048471      cmp byte [0x8049a91], 3\l| 0x08048478      jne 0x80484a1\l"]
+	"0x0804847a" -> "0x080488eb" [color="blue"];
+	"0x0804847a" [URL="main/0x0804847a", fillcolor="lightgray", color="black", label="| 0x0804847a      xchg ah, al\l| 0x0804847c      cbw\l| 0x0804847e      add word [0x8049a8e], ax\l| 0x08048485      add word [0x8049a8e], 2\l| 0x0804848d      mov esi, 0x8049a95\l| 0x08048492      xor eax, eax\l| 0x08048494      mov ax, word [0x8049a8e]\l| 0x0804849a      add esi, eax\l| 0x0804849c      jmp 0x80488eb\l"]
+	"0x080484a1" -> "0x0804851d" [color="green"];
+	"0x080484a1" -> "0x080484aa" [color="red"];
+	"0x080484a1" [URL="main/0x080484a1", fillcolor="lightgray", color="black", label="| 0x080484a1      cmp byte [0x8049a92], 1\l| 0x080484a8      jne 0x804851d\l"]
+	"0x080484aa" -> "0x080484da" [color="green"];
+	"0x080484aa" -> "0x080484b3" [color="red"];
+	"0x080484aa" [URL="main/0x080484aa", fillcolor="lightgray", color="black", label="| 0x080484aa      cmp byte [0x8049a93], 0\l| 0x080484b1      jne 0x80484da\l"]
+	"0x080484b3" -> "0x080488eb" [color="blue"];
+	"0x080484b3" [URL="main/0x080484b3", fillcolor="lightgray", color="black", label="| 0x080484b3      shr eax, 8\l| 0x080484b6      mov bl, byte [0x8049a94]\l| 0x080484bc      shl bx, 1\l| 0x080484bf      and ebx, 0xffff\l| 0x080484c5      mov word [ebx + 0x8049a84], ax\l| 0x080484cc      add word [0x8049a8e], 3\l| 0x080484d4      dec esi\l| 0x080484d5      jmp 0x80488eb\l"]
+	"0x080484da" -> "0x0804851d" [color="green"];
+	"0x080484da" -> "0x080484e3" [color="red"];
+	"0x080484da" [URL="main/0x080484da", fillcolor="lightgray", color="black", label="| 0x080484da      cmp byte [0x8049a93], 1\l| 0x080484e1      jne 0x804851d\l"]
+	"0x080484e3" -> "0x080484f0" [color="green"];
+	"0x080484e3" -> "0x080484ee" [color="red"];
+	"0x080484e3" [URL="main/0x080484e3", fillcolor="lightgray", color="black", label="| 0x080484e3      mov bl, byte [0x8049a94]\l| 0x080484e9      cmp bl, 3\l| 0x080484ec      jne 0x80484f0\l"]
+	"0x080484ee" -> "0x080484f0" [color="blue"];
+	"0x080484ee" [URL="main/0x080484ee", fillcolor="lightgray", color="black", label="| 0x080484ee      inc bl\l"]
+	"0x080484f0" -> "0x080488eb" [color="blue"];
+	"0x080484f0" [URL="main/0x080484f0", fillcolor="lightgray", color="black", label="| 0x080484f0      shl bx, 1\l| 0x080484f3      and ebx, 0xffff\l| 0x080484f9      mov ax, word [ebx + 0x8049a84]\l| 0x08048500      add word [0x8049a88], ax\l| 0x08048507      lahf\l| 0x08048508      mov byte [0x8049a8a], ah\l| 0x0804850e      inc word [0x8049a8e]\l| 0x08048515      sub esi, 3\l| 0x08048518      jmp 0x80488eb\l"]
+	"0x0804851d" -> "0x080485c0" [color="green"];
+	"0x0804851d" -> "0x0804852a" [color="red"];
+	"0x0804851d" [URL="main/0x0804851d", fillcolor="lightgray", color="black", label="| 0x0804851d      cmp byte [0x8049a92], 2\l| 0x08048524      jne 0x80485c0\l"]
+	"0x0804852a" -> "0x08048560" [color="green"];
+	"0x0804852a" -> "0x08048533" [color="red"];
+	"0x0804852a" [URL="main/0x0804852a", fillcolor="lightgray", color="black", label="| 0x0804852a      cmp byte [0x8049a93], 0\l| 0x08048531      jne 0x8048560\l"]
+	"0x08048533" -> "0x08048560" [color="green"];
+	"0x08048533" -> "0x0804853c" [color="red"];
+	"0x08048533" [URL="main/0x08048533", fillcolor="lightgray", color="black", label="| 0x08048533      cmp byte [0x8049a94], 0\l| 0x0804853a      jne 0x8048560\l"]
+	"0x0804853c" -> "0x080488eb" [color="blue"];
+	"0x0804853c" [URL="main/0x0804853c", fillcolor="lightgray", color="black", label="| 0x0804853c      xor ebx, ebx\l| 0x0804853e      mov bx, word [0x8049a84]\l| 0x08048545      mov al, byte [0x8049a8b]\l| 0x0804854a      mov byte [ebx + 0x8049a95], al\l| 0x08048550      add word [0x8049a8e], 1\l| 0x08048558      sub esi, 3\l| 0x0804855b      jmp 0x80488eb\l"]
+	"0x08048560" -> "0x080485c0" [color="green"];
+	"0x08048560" -> "0x08048569" [color="red"];
+	"0x08048560" [URL="main/0x08048560", fillcolor="lightgray", color="black", label="| 0x08048560      cmp byte [0x8049a93], 1\l| 0x08048567      jne 0x80485c0\l"]
+	"0x08048569" -> "0x08048596" [color="green"];
+	"0x08048569" -> "0x08048572" [color="red"];
+	"0x08048569" [URL="main/0x08048569", fillcolor="lightgray", color="black", label="| 0x08048569      cmp byte [0x8049a94], 0\l| 0x08048570      jne 0x8048596\l"]
+	"0x08048572" -> "0x080488eb" [color="blue"];
+	"0x08048572" [URL="main/0x08048572", fillcolor="lightgray", color="black", label="| 0x08048572      xor ebx, ebx\l| 0x08048574      mov bx, word [0x8049a84]\l| 0x0804857b      mov al, byte [ebx + 0x8049a95]\l| 0x08048581      mov byte [0x8049a8b], al\l| 0x08048586      add word [0x8049a8e], 1\l| 0x0804858e      sub esi, 3\l| 0x08048591      jmp 0x80488eb\l"]
+	"0x08048596" -> "0x080485c0" [color="green"];
+	"0x08048596" -> "0x0804859f" [color="red"];
+	"0x08048596" [URL="main/0x08048596", fillcolor="lightgray", color="black", label="| 0x08048596      cmp byte [0x8049a94], 3\l| 0x0804859d      jne 0x80485c0\l"]
+	"0x0804859f" -> "0x080488eb" [color="blue"];
+	"0x0804859f" [URL="main/0x0804859f", fillcolor="lightgray", color="black", label="| 0x0804859f      shr eax, 8\l| 0x080485a2      and eax, 0xffff\l| 0x080485a7      mov al, byte [eax + 0x8049a95]\l| 0x080485ad      mov byte [0x8049a8b], al\l| 0x080485b2      add word [0x8049a8e], 3\l| 0x080485ba      dec esi\l| 0x080485bb      jmp 0x80488eb\l"]
+	"0x080485c0" -> "0x08048621" [color="green"];
+	"0x080485c0" -> "0x080485c9" [color="red"];
+	"0x080485c0" [URL="main/0x080485c0", fillcolor="lightgray", color="black", label="| 0x080485c0      cmp byte [0x8049a92], 3\l| 0x080485c7      jne 0x8048621\l"]
+	"0x080485c9" -> "0x080485f5" [color="green"];
+	"0x080485c9" -> "0x080485d2" [color="red"];
+	"0x080485c9" [URL="main/0x080485c9", fillcolor="lightgray", color="black", label="| 0x080485c9      cmp byte [0x8049a93], 0\l| 0x080485d0      jne 0x80485f5\l"]
+	"0x080485d2" -> "0x080488eb" [color="blue"];
+	"0x080485d2" [URL="main/0x080485d2", fillcolor="lightgray", color="black", label="| 0x080485d2      mov al, byte [0x8049a94]\l| 0x080485d7      shl al, 1\l| 0x080485d9      and eax, 0xff\l| 0x080485de      inc word [eax + 0x8049a84]\l| 0x080485e5      add word [0x8049a8e], 1\l| 0x080485ed      sub esi, 3\l| 0x080485f0      jmp 0x80488eb\l"]
+	"0x080485f5" -> "0x08048621" [color="green"];
+	"0x080485f5" -> "0x080485fe" [color="red"];
+	"0x080485f5" [URL="main/0x080485f5", fillcolor="lightgray", color="black", label="| 0x080485f5      cmp byte [0x8049a93], 1\l| 0x080485fc      jne 0x8048621\l"]
+	"0x080485fe" -> "0x080488eb" [color="blue"];
+	"0x080485fe" [URL="main/0x080485fe", fillcolor="lightgray", color="black", label="| 0x080485fe      mov al, byte [0x8049a94]\l| 0x08048603      shl al, 1\l| 0x08048605      and eax, 0xff\l| 0x0804860a      dec word [eax + 0x8049a84]\l| 0x08048611      add word [0x8049a8e], 1\l| 0x08048619      sub esi, 3\l| 0x0804861c      jmp 0x80488eb\l"]
+	"0x08048621" -> "0x0804864c" [color="green"];
+	"0x08048621" -> "0x0804862a" [color="red"];
+	"0x08048621" [URL="main/0x08048621", fillcolor="lightgray", color="black", label="| 0x08048621      cmp byte [0x8049a92], 4\l| 0x08048628      jne 0x804864c\l"]
+	"0x0804862a" -> "0x080488eb" [color="blue"];
+	"0x0804862a" [URL="main/0x0804862a", fillcolor="lightgray", color="black", label="| 0x0804862a      mov bl, byte [0x8049a91]\l| 0x08048630      inc byte [ebx + 0x8049a84]\l| 0x08048636      lahf\l| 0x08048637      mov byte [0x8049a8a], ah\l| 0x0804863d      inc word [0x8049a8e]\l| 0x08048644      sub esi, 3\l| 0x08048647      jmp 0x80488eb\l"]
+	"0x0804864c" -> "0x08048677" [color="green"];
+	"0x0804864c" -> "0x08048655" [color="red"];
+	"0x0804864c" [URL="main/0x0804864c", fillcolor="lightgray", color="black", label="| 0x0804864c      cmp byte [0x8049a92], 5\l| 0x08048653      jne 0x8048677\l"]
+	"0x08048655" -> "0x080488eb" [color="blue"];
+	"0x08048655" [URL="main/0x08048655", fillcolor="lightgray", color="black", label="| 0x08048655      mov bl, byte [0x8049a91]\l| 0x0804865b      dec byte [ebx + 0x8049a84]\l| 0x08048661      lahf\l| 0x08048662      mov byte [0x8049a8a], ah\l| 0x08048668      inc word [0x8049a8e]\l| 0x0804866f      sub esi, 3\l| 0x08048672      jmp 0x80488eb\l"]
+	"0x08048677" -> "0x0804869c" [color="green"];
+	"0x08048677" -> "0x08048680" [color="red"];
+	"0x08048677" [URL="main/0x08048677", fillcolor="lightgray", color="black", label="| 0x08048677      cmp byte [0x8049a92], 6\l| 0x0804867e      jne 0x804869c\l"]
+	"0x08048680" -> "0x080488eb" [color="blue"];
+	"0x08048680" [URL="main/0x08048680", fillcolor="lightgray", color="black", label="| 0x08048680      mov bl, byte [0x8049a91]\l| 0x08048686      mov byte [ebx + 0x8049a84], ah\l| 0x0804868c      add word [0x8049a8e], 2\l| 0x08048694      sub esi, 2\l| 0x08048697      jmp 0x80488eb\l"]
+	"0x0804869c" -> "0x08048723" [color="green"];
+	"0x0804869c" -> "0x080486a5" [color="red"];
+	"0x0804869c" [URL="main/0x0804869c", fillcolor="lightgray", color="black", label="| 0x0804869c      cmp byte [0x8049a90], 1\l| 0x080486a3      jne 0x8048723\l"]
+	"0x080486a5" -> "0x080486bf" [color="green"];
+	"0x080486a5" -> "0x080486ae" [color="red"];
+	"0x080486a5" [URL="main/0x080486a5", fillcolor="lightgray", color="black", label="| 0x080486a5      cmp byte [0x8049a92], 6\l| 0x080486ac      jne 0x80486bf\l"]
+	"0x080486ae" -> "0x080486bf" [color="green"];
+	"0x080486ae" -> "0x080486b7" [color="red"];
+	"0x080486ae" [URL="main/0x080486ae", fillcolor="lightgray", color="black", label="| 0x080486ae      cmp byte [0x8049a91], 6\l| 0x080486b5      jne 0x80486bf\l"]
+	"0x080486b7" -> "0x080486be" [color="blue"];
+	"0x080486b7" [URL="main/0x080486b7", fillcolor="lightgray", color="black", label="| 0x080486b7      inc word [0x8049a8e]\l"]
+	"0x080486be" [URL="main/0x080486be", fillcolor="lightgray", color="black", label="| 0x080486be      ret\l"]
+	"0x080486bf" -> "0x080486e2" [color="green"];
+	"0x080486bf" -> "0x080486d1" [color="red"];
+	"0x080486bf" [URL="main/0x080486bf", fillcolor="lightgray", color="black", label="| 0x080486bf      mov bx, word [0x8049a88]\l| 0x080486c6      xor eax, eax\l| 0x080486c8      cmp byte [0x8049a92], 6\l| 0x080486cf      jne 0x80486e2\l"]
+	"0x080486d1" -> "0x080486ed" [color="blue"];
+	"0x080486d1" [URL="main/0x080486d1", fillcolor="lightgray", color="black", label="| 0x080486d1      xor ebx, ebx\l| 0x080486d3      mov bx, word [0x8049a88]\l| 0x080486da      mov bl, byte [ebx + 0x8049a95]\l| 0x080486e0      jmp 0x80486ed\l"]
+	"0x080486e2" -> "0x080486ed" [color="blue"];
+	"0x080486e2" [URL="main/0x080486e2", fillcolor="lightgray", color="black", label="| 0x080486e2      mov al, byte [0x8049a92]\l| 0x080486e7      mov bl, byte [eax + 0x8049a84]\l"]
+	"0x080486ed" -> "0x08048709" [color="green"];
+	"0x080486ed" -> "0x080486f6" [color="red"];
+	"0x080486ed" [URL="main/0x080486ed", fillcolor="lightgray", color="black", label="| 0x080486ed      cmp byte [0x8049a91], 6\l| 0x080486f4      jne 0x8048709\l"]
+	"0x080486f6" -> "0x08048714" [color="blue"];
+	"0x080486f6" [URL="main/0x080486f6", fillcolor="lightgray", color="black", label="| 0x080486f6      mov al, bl\l| 0x080486f8      xor ebx, ebx\l| 0x080486fa      mov bx, word [0x8049a88]\l| 0x08048701      mov byte [ebx + 0x8049a95], al\l| 0x08048707      jmp 0x8048714\l"]
+	"0x08048709" -> "0x08048714" [color="blue"];
+	"0x08048709" [URL="main/0x08048709", fillcolor="lightgray", color="black", label="| 0x08048709      mov al, byte [0x8049a91]\l| 0x0804870e      mov byte [eax + 0x8049a84], bl\l"]
+	"0x08048714" -> "0x080488eb" [color="blue"];
+	"0x08048714" [URL="main/0x08048714", fillcolor="lightgray", color="black", label="| 0x08048714      inc word [0x8049a8e]\l| 0x0804871b      sub esi, 3\l| 0x0804871e      jmp 0x80488eb\l"]
+	"0x08048723" -> "0x0804880f" [color="green"];
+	"0x08048723" -> "0x08048730" [color="red"];
+	"0x08048723" [URL="main/0x08048723", fillcolor="lightgray", color="black", label="| 0x08048723      cmp byte [0x8049a90], 2\l| 0x0804872a      jne 0x804880f\l"]
+	"0x08048730" -> "0x08048761" [color="green"];
+	"0x08048730" -> "0x08048739" [color="red"];
+	"0x08048730" [URL="main/0x08048730", fillcolor="lightgray", color="black", label="| 0x08048730      cmp byte [0x8049a91], 0\l| 0x08048737      jne 0x8048761\l"]
+	"0x08048739" -> "0x080488eb" [color="blue"];
+	"0x08048739" [URL="main/0x08048739", fillcolor="lightgray", color="black", label="| 0x08048739      mov bl, byte [0x8049a92]\l| 0x0804873f      mov al, byte [ebx + 0x8049a84]\l| 0x08048745      add byte [0x8049a8b], al\l| 0x0804874b      lahf\l| 0x0804874c      mov byte [0x8049a8a], ah\l| 0x08048752      inc word [0x8049a8e]\l| 0x08048759      sub esi, 3\l| 0x0804875c      jmp 0x80488eb\l"]
+	"0x08048761" -> "0x08048792" [color="green"];
+	"0x08048761" -> "0x0804876a" [color="red"];
+	"0x08048761" [URL="main/0x08048761", fillcolor="lightgray", color="black", label="| 0x08048761      cmp byte [0x8049a91], 2\l| 0x08048768      jne 0x8048792\l"]
+	"0x0804876a" -> "0x080488eb" [color="blue"];
+	"0x0804876a" [URL="main/0x0804876a", fillcolor="lightgray", color="black", label="| 0x0804876a      mov bl, byte [0x8049a92]\l| 0x08048770      mov al, byte [ebx + 0x8049a84]\l| 0x08048776      sub byte [0x8049a8b], al\l| 0x0804877c      lahf\l| 0x0804877d      mov byte [0x8049a8a], ah\l| 0x08048783      inc word [0x8049a8e]\l| 0x0804878a      sub esi, 3\l| 0x0804878d      jmp 0x80488eb\l"]
+	"0x08048792" -> "0x080487c3" [color="green"];
+	"0x08048792" -> "0x0804879b" [color="red"];
+	"0x08048792" [URL="main/0x08048792", fillcolor="lightgray", color="black", label="| 0x08048792      cmp byte [0x8049a91], 5\l| 0x08048799      jne 0x80487c3\l"]
+	"0x0804879b" -> "0x080488eb" [color="blue"];
+	"0x0804879b" [URL="main/0x0804879b", fillcolor="lightgray", color="black", label="| 0x0804879b      mov bl, byte [0x8049a92]\l| 0x080487a1      mov al, byte [ebx + 0x8049a84]\l| 0x080487a7      xor byte [0x8049a8b], al\l| 0x080487ad      lahf\l| 0x080487ae      mov byte [0x8049a8a], ah\l| 0x080487b4      inc word [0x8049a8e]\l| 0x080487bb      sub esi, 3\l| 0x080487be      jmp 0x80488eb\l"]
+	"0x080487c3" -> "0x0804880f" [color="green"];
+	"0x080487c3" -> "0x080487cc" [color="red"];
+	"0x080487c3" [URL="main/0x080487c3", fillcolor="lightgray", color="black", label="| 0x080487c3      cmp byte [0x8049a91], 7\l| 0x080487ca      jne 0x804880f\l"]
+	"0x080487cc" -> "0x080487e6" [color="green"];
+	"0x080487cc" -> "0x080487d5" [color="red"];
+	"0x080487cc" [URL="main/0x080487cc", fillcolor="lightgray", color="black", label="| 0x080487cc      cmp byte [0x8049a92], 6\l| 0x080487d3      jne 0x80487e6\l"]
+	"0x080487d5" -> "0x080487f1" [color="blue"];
+	"0x080487d5" [URL="main/0x080487d5", fillcolor="lightgray", color="black", label="| 0x080487d5      xor ebx, ebx\l| 0x080487d7      mov bx, word [0x8049a88]\l| 0x080487de      mov bl, byte [ebx + 0x8049a95]\l| 0x080487e4      jmp 0x80487f1\l"]
+	"0x080487e6" -> "0x080487f1" [color="blue"];
+	"0x080487e6" [URL="main/0x080487e6", fillcolor="lightgray", color="black", label="| 0x080487e6      mov al, byte [0x8049a92]\l| 0x080487eb      mov bl, byte [eax + 0x8049a84]\l"]
+	"0x080487f1" -> "0x080488eb" [color="blue"];
+	"0x080487f1" [URL="main/0x080487f1", fillcolor="lightgray", color="black", label="| 0x080487f1      mov ah, byte [0x8049a8b]\l| 0x080487f7      sub ah, bl\l| 0x080487f9      lahf\l| 0x080487fa      mov byte [0x8049a8a], ah\l| 0x08048800      inc word [0x8049a8e]\l| 0x08048807      sub esi, 3\l| 0x0804880a      jmp 0x80488eb\l"]
+	"0x0804880f" -> "0x080488e6" [color="green"];
+	"0x0804880f" -> "0x0804881c" [color="red"];
+	"0x0804880f" [URL="main/0x0804880f", fillcolor="lightgray", color="black", label="| 0x0804880f      cmp byte [0x8049a90], 3\l| 0x08048816      jne 0x80488e6\l"]
+	"0x0804881c" -> "0x08048867" [color="green"];
+	"0x0804881c" -> "0x08048825" [color="red"];
+	"0x0804881c" [URL="main/0x0804881c", fillcolor="lightgray", color="black", label="| 0x0804881c      cmp byte [0x8049a92], 2\l| 0x08048823      jne 0x8048867\l"]
+	"0x08048825" -> "0x08048867" [color="green"];
+	"0x08048825" -> "0x08048834" [color="red"];
+	"0x08048825" [URL="main/0x08048825", fillcolor="lightgray", color="black", label="| 0x08048825      mov bl, byte [0x8049a8a]\l| 0x0804882b      cmp byte [0x8049a91], 0\l| 0x08048832      jne 0x8048867\l"]
+	"0x08048834" -> "0x08048859" [color="green"];
+	"0x08048834" -> "0x0804883f" [color="red"];
+	"0x08048834" [URL="main/0x08048834", fillcolor="lightgray", color="black", label="| 0x08048834      shr bl, 6\l| 0x08048837      and bl, 1\l| 0x0804883a      cmp bl, 1\l| 0x0804883d      je 0x8048859\l"]
+	"0x0804883f" -> "0x080488eb" [color="blue"];
+	"0x0804883f" [URL="main/0x0804883f", fillcolor="lightgray", color="black", label="| 0x0804883f      shr eax, 8\l| 0x08048842      mov word [0x8049a8e], ax\l| 0x08048848      mov esi, 0x8049a95\l| 0x0804884d      and eax, 0xffff\l| 0x08048852      add esi, eax\l| 0x08048854      jmp 0x80488eb\l"]
+	"0x08048859" -> "0x080488eb" [color="blue"];
+	"0x08048859" [URL="main/0x08048859", fillcolor="lightgray", color="black", label="| 0x08048859      add word [0x8049a8e], 3\l| 0x08048861      dec esi\l| 0x08048862      jmp 0x80488eb\l"]
+	"0x08048867" -> "0x08048890" [color="green"];
+	"0x08048867" -> "0x08048870" [color="red"];
+	"0x08048867" [URL="main/0x08048867", fillcolor="lightgray", color="black", label="| 0x08048867      cmp byte [0x8049a92], 3\l| 0x0804886e      jne 0x8048890\l"]
+	"0x08048870" -> "0x08048890" [color="green"];
+	"0x08048870" -> "0x08048879" [color="red"];
+	"0x08048870" [URL="main/0x08048870", fillcolor="lightgray", color="black", label="| 0x08048870      cmp byte [0x8049a91], 0\l| 0x08048877      jne 0x8048890\l"]
+	"0x08048879" -> "0x080488eb" [color="blue"];
+	"0x08048879" [URL="main/0x08048879", fillcolor="lightgray", color="black", label="| 0x08048879      shr eax, 8\l| 0x0804887c      mov word [0x8049a8e], ax\l| 0x08048882      mov esi, 0x8049a95\l| 0x08048887      and eax, 0xffff\l| 0x0804888c      add esi, eax\l| 0x0804888e      jmp 0x80488eb\l"]
+	"0x08048890" -> "0x080488e6" [color="green"];
+	"0x08048890" -> "0x08048899" [color="red"];
+	"0x08048890" [URL="main/0x08048890", fillcolor="lightgray", color="black", label="| 0x08048890      cmp byte [0x8049a92], 6\l| 0x08048897      jne 0x80488e6\l"]
+	"0x08048899" -> "0x080488c2" [color="green"];
+	"0x08048899" -> "0x080488a2" [color="red"];
+	"0x08048899" [URL="main/0x08048899", fillcolor="lightgray", color="black", label="| 0x08048899      cmp byte [0x8049a91], 2\l| 0x080488a0      jne 0x80488c2\l"]
+	"0x080488a2" -> "0x080488eb" [color="blue"];
+	"0x080488a2" [URL="main/0x080488a2", fillcolor="lightgray", color="black", label="| 0x080488a2      mov al, byte [0x8049a8b]\l| 0x080488a7      sub al, ah\l| 0x080488a9      lahf\l| 0x080488aa      mov byte [0x8049a8a], ah\l| 0x080488b0      mov byte [0x8049a8b], al\l| 0x080488b5      add word [0x8049a8e], 2\l| 0x080488bd      sub esi, 2\l| 0x080488c0      jmp 0x80488eb\l"]
+	"0x080488c2" -> "0x080488e6" [color="green"];
+	"0x080488c2" -> "0x080488cb" [color="red"];
+	"0x080488c2" [URL="main/0x080488c2", fillcolor="lightgray", color="black", label="| 0x080488c2      cmp byte [0x8049a91], 7\l| 0x080488c9      jne 0x80488e6\l"]
+	"0x080488cb" -> "0x080488eb" [color="blue"];
+	"0x080488cb" [URL="main/0x080488cb", fillcolor="lightgray", color="black", label="| 0x080488cb      mov al, byte [0x8049a8b]\l| 0x080488d0      sub al, ah\l| 0x080488d2      lahf\l| 0x080488d3      mov byte [0x8049a8a], ah\l| 0x080488d9      add word [0x8049a8e], 2\l| 0x080488e1      sub esi, 2\l| 0x080488e4      jmp 0x80488eb\l"]
+	"0x080488e6" -> "0x080486be" [color="blue"];
+	"0x080488e6" [URL="main/0x080488e6", fillcolor="lightgray", color="black", label="| 0x080488e6      jmp 0x80486be\l"]
+	"0x080488eb" -> "0x0804843b" [color="blue"];
+	"0x080488eb" [URL="main/0x080488eb", fillcolor="lightgray", color="black", label="\\ 0x080488eb      jmp 0x804843b\l"]
+}
